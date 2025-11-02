@@ -1,5 +1,13 @@
 
 export function Tokenlaunchpad() {
+
+    function createtoken() {
+        const name = document.getElementById('name').value;
+        const symbol = document.getElementById('symbol').value;
+        const imageUrl = document.getElementById('imageUrl').value;
+        const initialSupply = document.getElementById('initialSupply').value;
+    }
+
     return  <div style={{
         height: '100vh',
         display: 'flex',
@@ -12,6 +20,6 @@ export function Tokenlaunchpad() {
         <input className='inputText' type='text' placeholder='Symbol'></input> <br />
         <input className='inputText' type='text' placeholder='Image URL'></input> <br />
         <input className='inputText' type='text' placeholder='Initial Supply'></input> <br />
-        <button className='btn'>Create a token</button>
+        <button onClick={createtoken} className='btn'>Create a token</button>
     </div>
 }
